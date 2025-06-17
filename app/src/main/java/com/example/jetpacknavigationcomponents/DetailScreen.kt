@@ -19,27 +19,32 @@ fun DetailScreen(
     productId: String,
     onNavigateBack: () -> Unit
 ) {
-   Column(
-       modifier = Modifier.fillMaxSize().padding(16.dp),
-       verticalArrangement = Arrangement.Center,
-       horizontalAlignment = Alignment.CenterHorizontally
-   ) {
-       Text(
-           text = "Product Details",
-           style = MaterialTheme.typography.headlineMedium
-       )
+    // Same implementation as before
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Product Details (Type-Safe)",
+            style = MaterialTheme.typography.headlineMedium
+        )
 
-       Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
-       Text(
-           text = "Product ID: $productId",
-           style = MaterialTheme.typography.bodyLarge
-       )
+        Text(
+            text = "Product ID: $productId",
+            style = MaterialTheme.typography.bodyLarge
+        )
 
-       Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(32.dp))
 
-       Button(onClick = onNavigateBack) {
-           Text("Go Back")
-       }
-   }
+        Button(
+            onClick = onNavigateBack
+        ) {
+            Text("Go Back")
+        }
+    }
 }

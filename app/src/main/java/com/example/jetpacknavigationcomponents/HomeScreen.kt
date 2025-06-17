@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 fun HomeScreen(
     onNavigateToDetail: (String) -> Unit
 ) {
+    // Same implementation as before
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -26,15 +27,15 @@ fun HomeScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Home Screen",
+            text = "Home Screen (Type-Safe)",
             style = MaterialTheme.typography.headlineMedium
         )
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        Button(onClick = {
-            onNavigateToDetail("ABC123")
-        }) {
+        Button(
+            onClick = { onNavigateToDetail("ABC123") }
+        ) {
             Text("View Product Details")
         }
     }
